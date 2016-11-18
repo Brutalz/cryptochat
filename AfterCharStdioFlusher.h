@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 class AfterCharStdioFlusher
 {
 public:
@@ -8,5 +10,5 @@ public:
 
 private:
 	class Impl;
-	Impl *impl;
+	std::unique_ptr<Impl> impl;
 };

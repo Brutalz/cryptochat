@@ -4,13 +4,13 @@
 
 class AfterCharStdioFlusher::Impl {
 public:
-	struct termios original_settings;
+    struct termios original_settings;
 };
 
 AfterCharStdioFlusher::AfterCharStdioFlusher()
-	: impl(new Impl())
+    : impl(new Impl())
 {
-	struct termios new_settings;
+    struct termios new_settings;
     tcgetattr(0, &impl->original_settings);
     new_settings = impl->original_settings;
     new_settings.c_lflag &= ~(ICANON | ECHO);
@@ -19,5 +19,5 @@ AfterCharStdioFlusher::AfterCharStdioFlusher()
 
 AfterCharStdioFlusher::~AfterCharStdioFlusher()
 {
-	tcsetattr(0, TCSANOW, &impl->original_settings);
+    tcsetattr(0, TCSANOW, &impl->original_settings);
 }
