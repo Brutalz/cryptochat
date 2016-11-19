@@ -2,7 +2,8 @@
 
 #include <termios.h>
 
-class AfterCharStdioFlusher::Impl {
+class AfterCharStdioFlusher::Impl
+{
 public:
     struct termios original_settings;
 };
