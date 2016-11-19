@@ -7,7 +7,7 @@
 #include <sys/timerfd.h>
 #include <unistd.h>
 
-#include "AfterCharStdioFlusher.h"
+#include "AfterCharStdioFlusher.hpp"
 
 int main(int argc, char **argv)
 {

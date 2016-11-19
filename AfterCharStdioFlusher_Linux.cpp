@@ -1,4 +1,4 @@
-#include "AfterCharStdioFlusher.h"
+#include "AfterCharStdioFlusher.hpp"
 
 #include <termios.h>
 
